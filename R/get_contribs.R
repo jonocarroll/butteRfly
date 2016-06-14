@@ -22,10 +22,10 @@ get_contribs <- function(user) {
   contribsDF <- data.frame(c.date, c.data, c.fill, stringsAsFactors=FALSE)
       
   ## split into weeks
-  contribsDF$c.week <- cut(contribsDF$c.date, breaks="week", labels=FALSE)
+  contribsDF$c.week  <- cut(contribsDF$c.date, breaks="week", start.on.monday=FALSE, labels=FALSE)
   contribsDF$c.month <- month(contribsDF$c.date, abbr=TRUE, label=TRUE)
-  contribsDF$c.day  <- as.integer(lubridate::wday(contribsDF$c.date))
-  contribsDF$id     <- rownames(contribsDF)
+  contribsDF$c.day   <- as.integer(lubridate::wday(contribsDF$c.date))
+  contribsDF$id      <- rownames(contribsDF)
   
   ## unique values of month
   rl <- rle(as.character(contribsDF$c.month))
@@ -49,10 +49,10 @@ get_contribs <- function(user) {
   gg <- gg + theme(panel.grid.major=element_blank(),
                    panel.grid.minor=element_blank())
   # gg <- gg + theme(axis.text.x=element_text(vjust=0.5))
-  gg <- gg + labs(x="", y="", title="Past 1 year on GitHub", subtitle=paste0("@",user), caption="http://github.com/jonocarroll/buttRfly")
+  gg <- gg + labs(x="", y="", title="Past 12 months on GitHub", subtitle=paste0("@",user), caption="http://github.com/jonocarroll/buttRfly")
   gg <- gg + coord_fixed(ratio=1)
   print(gg)
   
-  return(NULL)
+  return(gg)
   
 }
