@@ -4,7 +4,7 @@
 \alias{get_stackoverflow}
 \title{Retrieve Answers Data for a Stack Overflow User and Chart it}
 \usage{
-get_stackoverflow(user)
+get_stackoverflow(user, addAccepted = TRUE, showPlot = TRUE)
 }
 \arguments{
 \item{user}{StackOverflow user id}

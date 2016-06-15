@@ -4,13 +4,13 @@
 \alias{get_twitter}
 \title{Retrieve Tweet Data for a Twitter User and Chart it}
 \usage{
-get_twitter(user)
+get_twitter(user, loadSaved = NULL, addNumbers = TRUE, showPlot = TRUE)
 }
 \arguments{
 \item{user}{Twitter user (handle)}
 }
 \value{
-
+a list containing the ggplot object and data object
 }
 \description{
 Retrieve Tweet Data for a Twitter User and Chart it
