@@ -18,12 +18,13 @@ seen on GitHub profiles. Alternatively, uses a different color scheme
 in the style of another popular site, e.g. twitter, stackoverflow.
 }
 \examples{
+\dontrun{
 library("ggplot2")
 ## get data
 p <- ggplot(commit_data) + geom_tile(aes(x=c.week, y=c.day)) + theme_github()
 
 ## Twitter colors
-p + theme_github(alt="Twitter")
+p + theme_github(alt="Twitter")}
 
 }
 

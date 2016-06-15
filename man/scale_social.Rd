@@ -21,9 +21,10 @@ The hues in each palette are:
 }
 }
 \examples{
+\dontrun{
 library(scales)
 show_col(social_pal("GitHub")(6))
 show_col(social_pal("Twitter")(6))
-show_col(social_pal("StackOverflow")(6))
+show_col(social_pal("StackOverflow")(6))}
 }
 
