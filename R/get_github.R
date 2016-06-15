@@ -26,6 +26,7 @@
 #' @import ggplot2
 #' @import XML
 #' @importFrom xml2 read_xml
+#' @importFrom githubtools prepare_for_github_chart create_github_chart
 #'   
 #' @export
 #' 

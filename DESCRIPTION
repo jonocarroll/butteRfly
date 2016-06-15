@@ -2,14 +2,24 @@ Package: butteRfly
 Title: What the Package Does (one line, title case)
 Version: 0.0.0.9000
 Authors@R: person("Jonathan", "Carroll", email = "jono@jcarroll.com.au", role = c("aut", "cre"))
-Description: What the package does (one paragraph).
+Description: Analyse someone's social network activity
 Depends:
     R (>= 3.3.0)
 License: GPL-3
 Encoding: UTF-8
 LazyData: true
 Imports:
-    httr
+    httr,
+    magrittr,
+    dplyr,
+    XML,
+    xml2,
+    lubridate,
+    ggplot2,
+    stackr,
+    twitteR,
+    gridExtra,
+    jsonlite
+Depends: githubtools
 RoxygenNote: 5.0.1
-Remotes:
-  jonocarroll/githubtools
+Remotes: jonocarroll/githubtools

@@ -29,6 +29,7 @@
 #'   
 #' @importFrom twitteR userTimeline twListToDF
 #' @import dplyr
+#' @importFrom githubtools prepare_for_github_chart create_github_chart
 #'   
 #' @export
 #' 
