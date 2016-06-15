@@ -44,5 +44,6 @@ Additionally, number of contributions (commits/Tweets/accepted answers) can be o
 Currently relies on [jonocarroll/githubtools](http://github.com/jonocarroll/githubtools) which contains the *theme_github* and *scale_fill_social* *ggplot2* functions. 
 
 ## Future plans:
+  + shiny dashboard
   + Facebook (?)
   + Other socials?
