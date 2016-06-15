@@ -1,6 +1,6 @@
 get_stackoverflow <- function(user) {
   
-  stackoverflow_setup()
+  # stackoverflow_setup()
   
   # timeline <- twitteR::userTimeline(user, n=3200, includeRts=TRUE)
   # answers <- me <- stack_users(4168169, "answers", num_pages = 10, pagesize = 100)
