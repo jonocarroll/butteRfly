@@ -27,7 +27,6 @@ r_binary_install:
   - dplyr
   - XML
   - jsonlite
-  - httr
 
 after_success:
   - Rscript -e 'library(covr); codecov()'

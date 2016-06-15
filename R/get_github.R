@@ -19,7 +19,6 @@
 #'   
 #'   list(plot = <ggplot2 object>, data = <data.frame>)
 #' 
-#' @import httr
 #' @import magrittr
 #' @import dplyr
 #' @importFrom lubridate today years month wday
