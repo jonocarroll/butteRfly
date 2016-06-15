@@ -19,12 +19,15 @@ r_build_args: --no-build-vignettes --no-manual --no-resave-data
 r_check_args: --no-build-vignettes --no-manual
 
 r_github_packages:
+  - dgrtwo/stackr
   - jimhester/covr
 
 r_binary_install:
   - magrittr
   - dplyr
   - XML
+  - jsonlite
+  - httr
 
 after_success:
   - Rscript -e 'library(covr); codecov()'
