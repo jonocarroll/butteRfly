@@ -1,4 +1,4 @@
-Package: buttRfly
+Package: butteRfly
 Title: What the Package Does (one line, title case)
 Version: 0.0.0.9000
 Authors@R: person("Jonathan", "Carroll", email = "jono@jcarroll.com.au", role = c("aut", "cre"))

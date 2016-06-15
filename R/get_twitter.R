@@ -1,3 +1,16 @@
+#' Retrieve Tweet Data for a Twitter User and Chart it
+#'
+#' @param user Twitter user (handle)
+#'
+#' @return
+#' 
+#' @importFrom twitteR userTimeline twListToDF
+#' @import magrittr
+#' @import dplyr
+#' @importFrom lubridate today years month wday 
+#' @import ggplot2
+#' 
+#' @export
 get_twitter <- function(user) {
   
   twitter_setup()

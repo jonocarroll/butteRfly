@@ -1,14 +1,17 @@
-#' Title
+#' Retrieve Contribution Data for a GitHub User and Chart it
 #'
-#' @param user 
+#' @param user GitHub user (handle)
 #'
 #' @return
 #' 
 #' @import httr
+#' @import magrittr
+#' @import dplyr
+#' @importFrom lubridate today years month wday 
+#' @import ggplot2
 #' 
 #' @export
 #'
-#' @examples
 get_contribs <- function(user) {
   
   gh_url <- paste0("https://github.com/users/",user,"/contributions")

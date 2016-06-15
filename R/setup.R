@@ -6,7 +6,8 @@
 #'
 #' @return NULL (used for side-effect)
 #'
-#' @import twitteR
+#' @importFrom twitteR setup_twitter_oauth
+#' @importFrom jsonlite toJSON
 #'
 #' @export
 #'

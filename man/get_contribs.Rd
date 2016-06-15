@@ -2,17 +2,17 @@
 % Please edit documentation in R/get_contribs.R
 \name{get_contribs}
 \alias{get_contribs}
-\title{Title}
+\title{Retrieve Contribution Data for a GitHub User and Chart it}
 \usage{
 get_contribs(user)
 }
 \arguments{
-\item{user}{}
+\item{user}{GitHub user (handle)}
 }
 \value{
 
 }
 \description{
-Title
+Retrieve Contribution Data for a GitHub User and Chart it
 }
 
