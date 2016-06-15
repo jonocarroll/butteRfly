@@ -26,7 +26,6 @@
 #' @import ggplot2
 #' @import XML
 #' @importFrom xml2 read_xml
-#' @importFrom githubtools prepare_for_github_chart create_github_chart
 #'   
 #' @export
 #' 
@@ -48,15 +47,18 @@ get_github_chart <- function(user, addCommits = TRUE, showPlot = TRUE) {
   contribsDF <- data.frame(date = c.date, c.data, c.fill, stringsAsFactors = FALSE)
   
   if (addCommits) {
-    gh_data <- githubtools::prepare_for_github_chart(data_agg      = contribsDF, 
+    # gh_data <- githubtools::prepare_for_github_chart(data_agg      = contribsDF, 
+    gh_data <- prepare_for_github_chart(data_agg      = contribsDF, 
                                         primaryData   = "c.data", 
                                         secondaryData = "c.data")
   } else {
-    gh_data <- githubtools::prepare_for_github_chart(data_agg    = contribsDF, 
+    # gh_data <- githubtools::prepare_for_github_chart(data_agg    = contribsDF, 
+    gh_data <- prepare_for_github_chart(data_agg    = contribsDF, 
                                         primaryData = "c.data")
   }
   
-  gg <- githubtools::create_github_chart(gh_data, user, network = "GitHub")
+  # gg <- githubtools::create_github_chart(gh_data, user, network = "GitHub")
+  gg <- create_github_chart(gh_data, user, network = "GitHub")
   
   gg <- gg + labs(title = "Past 12 months on GitHub", 
                   subtitle = paste0("@", user))

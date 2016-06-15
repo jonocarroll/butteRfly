@@ -41,7 +41,7 @@ Additionally, number of contributions (commits/Tweets/accepted answers) can be o
 
 ## Dependencies
 
-Currently relies on [jonocarroll/githubtools](http://github.com/jonocarroll/githubtools) which contains the *theme_github* and *scale_fill_social* *ggplot2* functions. 
+<del>Currently relies on [jonocarroll/githubtools](http://github.com/jonocarroll/githubtools) which contains the *theme_github* and *scale_fill_social* *ggplot2* functions. </del> Given that depending on a GitHub package that itself, depends on a GitHub package, seems to cause some headaches, for now I've incorporated the relevant functionality directly.
 
 ## Future plans:
   + shiny dashboard

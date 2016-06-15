@@ -23,7 +23,6 @@
 #'   
 #' @importFrom stackr stack_users
 #' @import dplyr
-#' @importFrom githubtools prepare_for_github_chart create_github_chart
 #'   
 #' @export
 #' 
@@ -50,15 +49,18 @@ get_stackoverflow_chart <- function(user = NULL, addAccepted = TRUE, showPlot = 
   answers_agg[is.na(answers_agg)] <- 0
   
   if (addAccepted) {
-  gh_data <- githubtools::prepare_for_github_chart(data_agg      = answers_agg, 
+  # gh_data <- githubtools::prepare_for_github_chart(data_agg      = answers_agg, 
+  gh_data <- prepare_for_github_chart(data_agg      = answers_agg, 
                                       primaryData   = "nAnswers", 
                                       secondaryData = "nAccepted")
   } else {
-  gh_data <- githubtools::prepare_for_github_chart(data_agg    = answers_agg, 
+  # gh_data <- githubtools::prepare_for_github_chart(data_agg    = answers_agg, 
+  gh_data <- prepare_for_github_chart(data_agg    = answers_agg, 
                                       primaryData = "nAnswers")
   }
 
-  gg <- githubtools::create_github_chart(gh_data, user, network = "StackOverflow")
+  # gg <- githubtools::create_github_chart(gh_data, user, network = "StackOverflow")
+  gg <- create_github_chart(gh_data, user, network = "StackOverflow")
   
   gg <- gg + labs(title = "Past 12 months on StackOverflow", 
                   subtitle = paste0(user, "; @", username))

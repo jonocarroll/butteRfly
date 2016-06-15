@@ -29,7 +29,6 @@
 #'   
 #' @importFrom twitteR userTimeline twListToDF
 #' @import dplyr
-#' @importFrom githubtools prepare_for_github_chart create_github_chart
 #'   
 #' @export
 #' 
@@ -58,11 +57,13 @@ get_twitter_chart <- function(user = NULL, loadSaved = NULL, addNumbers = TRUE, 
     timelineDF_agg[is.na(timelineDF_agg)] <- 0
     
     if (addNumbers) {
-      gh_data <- githubtools::prepare_for_github_chart(data_agg      = timelineDF_agg, 
+      # gh_data <- githubtools::prepare_for_github_chart(data_agg      = timelineDF_agg, 
+      gh_data <- prepare_for_github_chart(data_agg      = timelineDF_agg, 
                                           primaryData   = "nTweets", 
                                           secondaryData = "nTweets")
     } else {
-      gh_data <- githubtools::prepare_for_github_chart(data_agg    = timelineDF_agg, 
+      # gh_data <- githubtools::prepare_for_github_chart(data_agg    = timelineDF_agg, 
+      gh_data <- prepare_for_github_chart(data_agg    = timelineDF_agg, 
                                           primaryData = "nTweets")
     }
   } else {
@@ -70,7 +71,8 @@ get_twitter_chart <- function(user = NULL, loadSaved = NULL, addNumbers = TRUE, 
     if (!addNumbers) gh_data$data$secondaryTF <- "" 
   }
   
-  gg <- githubtools::create_github_chart(gh_data, user, network = "Twitter")
+  # gg <- githubtools::create_github_chart(gh_data, user, network = "Twitter")
+  gg <- create_github_chart(gh_data, user, network = "Twitter")
   
   gg <- gg + labs(title = "Past 12 months on Twitter", 
                   subtitle = paste0("@", user))
