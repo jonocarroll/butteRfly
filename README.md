@@ -5,7 +5,7 @@
 [![GitHub stars](https://img.shields.io/github/stars/jonocarroll/butteRfly.svg)](https://github.com/jonocarroll/butteRfly/stargazers)
 [![Twitter](https://img.shields.io/twitter/url/https/github.com/jonocarroll/butteRfly.svg?style=social)](https://twitter.com/intent/tweet?text=Wow:&url=%5Bobject%20Object%5D)
 
-# buttRfly
+# butteRfly
 
 # *Are you a social butteRfly?*
 
