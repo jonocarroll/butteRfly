@@ -14,7 +14,7 @@ prepare_for_github_chart(data_agg, primaryData, secondaryData = "dummy")
 \item{secondaryData}{name of the secondary data column to label each daily tile (optional).}
 }
 \value{
-a list object ready for \link{\code{create_github_chart}}.
+a list object ready for \code{\link{create_github_chart}}.
 }
 \description{
 Prepare Daily Data Ready for Use in a GitHub-Style Chart

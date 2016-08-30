@@ -5,7 +5,7 @@
 #' @param primaryData name of the primary data column to plot daily
 #' @param secondaryData name of the secondary data column to label each daily tile (optional).
 #'
-#' @return a list object ready for \link{\code{create_github_chart}}.
+#' @return a list object ready for \code{\link{create_github_chart}}.
 #'
 #' @export
 #'
@@ -70,7 +70,7 @@ prepare_for_github_chart <- function(data_agg, primaryData, secondaryData="dummy
 
 #' Create a GitHub-style Tile Chart with Social Network Color Palette
 #'
-#' @param gh_data data prepared with \link{\code{prepare_for_github_chart}}
+#' @param gh_data data prepared with \code{\link{prepare_for_github_chart}}
 #' @param user user ID to add to the subtitle
 #' @param network which color palette to use, styled after a network (GitHub, Twitter, or StackOverflow). 
 #'  Case insensitive, but will be also be used in the title.

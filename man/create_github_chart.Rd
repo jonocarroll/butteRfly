@@ -8,7 +8,7 @@ create_github_chart(gh_data, user, network = c("GitHub", "Twitter",
   "StackOverflow"))
 }
 \arguments{
-\item{gh_data}{data prepared with \link{\code{prepare_for_github_chart}}}
+\item{gh_data}{data prepared with \code{\link{prepare_for_github_chart}}}
 
 \item{user}{user ID to add to the subtitle}
 
